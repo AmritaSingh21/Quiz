@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Lab</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Lecture 7 Lab: Web Form</h1>
+    <p>Fields with * are required</p>
+    <form id="form" action="https://formspree.io/f/mvolqpwj" method="post">
+        <fieldset id="perInfo">
+            <legend>Your Personal Information</legend>
+            <div class="formRow">
+                <label for="name">Full Name*:</label>
+                <input name="name" id="name" type="text" placeholder="First and last name" required />
+            </div>
+            <div class="formRow">
+                <label for="email">Email Address*:</label>
+                <input name="email" id="email" type="email" placeholder="someone@somewhere.com" required />
+            </div>
+            <div class="formRow">
+                <label for="study">Current Study:</label>
+                <input name="study" id="study" type="text" value="Douglas College" />
+            </div>
+            <div class="formRow">
+                <label for="age">Age:</label>
+                <input name="age" id="age" type="number" value="20" step="1" min="1" max="100" />
+            </div>
+        </fieldset>
+        <fieldset id="quiz">
+            <legend>Your Quiz</legend>
+            1. What is the result of the following equation?
+            <div class="quizRow">
+                <label for="q1">2<sup>2</sup>x5=</label>
+                <input name="q1" id="q1" type="text" />
+            </div>
+            <div class="quizRow">
+                <label for="q2">2. What does the acronym W3C stand for? </label>
+                <select id="q2" name="q2">
+                    <option value="c1">3rd World War Coalition</option>
+                    <option value="c2">World Wide WarCraft</option>
+                    <option value="c3">World Wide Web Consortium</option>
+                    <option value="c4">I’m afraid to answer it</option>
+                </select>
+            </div>
+            <div class="quizRow">
+                <label for="q3">3. CSS is an abbriviation of </label>
+                <input name="q3" id="q3" type="text" /> style sheet.
+            </div>
+            <div class="quizRow">
+                <label for="q4">4. Select all the (scripting) languages we learn in CSIS 1280 </label><br>
+                <input name="html" id="html" value="html" type="checkbox" />
+                <label for="html">HTML</label>
+                <input name="css" id="css" value="css" type="checkbox" />
+                <label for="css">CSS</label>
+                <input name="js" id="js" value="js" type="checkbox" />
+                <label for="js">JavaScript</label>
+                <input name="php" id="php" value="php" type="checkbox" />
+                <label for="php">PHP</label>
+                <input name="c#" id="c#" value="c#" type="checkbox" />
+                <label for="c#">C#</label>
+                <input name="java" id="java" value="java" type="checkbox" />
+                <label for="java">Java</label>
+            </div>
+            <div class="quizRow">
+                <label>5. Consider the picture of a DOM structure below. Which of
+                    the following selector <b>CANNOT</b> be used to select all the &#10092;p&#10093; elements?
+                </label>
+                <div class="q5">
+                    <fieldset class="q5Group">
+                        <input name="q5Group" id="c1" value="c1" type="radio" />
+                        <label for="c1">p</label><br>
+                        <input name="q5Group" id="c2" value="c2" type="radio" />
+                        <label for="c2">h1 ~ p</label><br>
+                        <input name="q5Group" id="c3" value="c3" type="radio" />
+                        <label for="c3">articl p</label><br>
+                        <input name="q5Group" id="c4" value="c4" type="radio" />
+                        <label for="c4">article > p</label><br>
+                        <input name="q5Group" id="c5" value="c5" type="radio" />
+                        <label for="c5">h1 + p</label>
+                    </fieldset>
+                    <img src="img/q5.PNG" alt="Q5">
+                </div>
+            </div>
+            <div class="quizRow">
+
+                <label>6. Consider the picture of a DOM structure below. Which of
+                    the following selector <b>CAN</b> be used to select all the
+                    identified &#10092;li&#10093; elements?
+                </label>
+                <div class="q6">
+                    <fieldset class="q6Group">
+                        <input name="q6Group" id="c1" value="c1" type="radio" />
+                        <label for="c1">li</label><br>
+                        <input name="q6Group" id="c2" value="c2" type="radio" />
+                        <label for="c2">li:nth-child(2n+1)</label><br>
+                        <input name="q6Group" id="c3" value="c3" type="radio" />
+                        <label for="c3">ul > li:(2n+1)</label><br>
+                        <input name="q6Group" id="c4" value="c4" type="radio" />
+                        <label for="c4">ul > li</label><br>
+                        <input name="q6Group" id="c5" value="c5" type="radio" />
+                        <label for="c5">ul > li(2n+1)</label>
+                    </fieldset>
+                    <img src="img/q6.PNG" alt="Q6">
+                </div>
+            </div>
+            <div class="quizRow ques7">
+                <label for="q7" class="q7label">7. Douglas College and the Coquitlam Campus was named after
+                    the former Governor and Liutenant-Governor of British Columbia.
+                    What are their names?
+                </label>
+                <textarea name="q7" id="q7"></textarea>
+            </div>
+        </fieldset>
+        <div id="buttons">
+            <input type="submit" value="Submit My Quiz" />
+            <input type="reset" value="Cancel" />
+        </div>
+    </form>
+</body>
+
+</html>
